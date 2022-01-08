@@ -5,7 +5,7 @@ const path = require ('path')
 const filePath = path.join(__dirname, '../measurements.txt')
 
 
-async function getIncreasedWindows(){
+function numberOfTimesWindowIncreased(){
 
     const dataStr =  fs.readFileSync(filePath, 'utf-8', (err, data) => {
 
@@ -29,8 +29,6 @@ async function getIncreasedWindows(){
     // for loop to cycle through windows
 
     for(let i = 0 ; i < arrOfData.length ; i++){
-
-        // firstWindow
         
         let element1 = parseInt(arrOfData[i], 10);
 
@@ -60,4 +58,4 @@ async function getIncreasedWindows(){
 
  
 
-getIncreasedWindows();
+numberOfTimesWindowIncreased();
